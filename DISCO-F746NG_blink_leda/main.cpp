@@ -1,10 +1,9 @@
 #include "mbed.h"
-
+#define SHORT 0.2;
+#define LONG 0.6;
 
 Serial pc(USBTX, USBRX);
 DigitalOut myled(LED1);
-const int SHORT = 0.2;
-const int LONG = 0.6;
 
 void blinkLed(float one, float two, float three, float four, float five) {
     if (one > 0){
