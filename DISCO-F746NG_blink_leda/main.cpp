@@ -1,6 +1,6 @@
 #include "mbed.h"
-#define SHORT 0.2;
-#define LONG 0.6;
+#define SHORT 0.2
+#define LONG 0.6
 
 Serial pc(USBTX, USBRX);
 DigitalOut myled(LED1);
