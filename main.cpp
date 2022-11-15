@@ -7,18 +7,17 @@ Thread t1;
 Thread t2;
 
 void display(int xPosition, int yPosition, int number) {
-  BSP_LCD_DisplayStringAt(xPosition, yPosition,
-                          (uint8_t *)"Adam Jakub" + number, CENTER_MODE);
+  BSP_LCD_DisplayStringAt(xPosition, yPosition, (uint8_t *)"Adam Jakub" + number, CENTER_MODE);
 }
 
 void startThread1() {
   display(0, 50, 3);
-  HAL_Delay(DISPLAY_TIME);
+  HAL_Delay(TIME);
 }
 
 void startThread2() {
   display(0, 100, 5);
-  HAL_Delay(DISPLAY_TIME);
+  HAL_Delay(TIME);
 }
 
 int main() {
@@ -34,12 +33,12 @@ int main() {
   t1.start(startThread1);
   t1.join();
   BSP_LCD_Clear(LCD_COLOR_BLACK);
-  ThisThread::sleep_for(DISPLAY_TIME);
+  ThisThread::sleep_for(TIME);
 
   t2.start(startThread2);
   t2.join();
   BSP_LCD_Clear(LCD_COLOR_BLACK);
-  ThisThread::sleep_for(DISPLAY_TIME * 2);
+  ThisThread::sleep_for(TIME * 2);
 
   while (true) {
   }
