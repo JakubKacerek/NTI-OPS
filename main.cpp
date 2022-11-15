@@ -1,7 +1,7 @@
 #include "mbed.h"
 #include "stm32746g_discovery_lcd.h"
 
-#define DISPLAY_TIME 1000
+#define TIME 1000
 
 Thread t1;
 Thread t2;
