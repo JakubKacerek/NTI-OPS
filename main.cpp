@@ -39,7 +39,4 @@ int main() {
   t2.join();
   BSP_LCD_Clear(LCD_COLOR_BLACK);
   ThisThread::sleep_for(TIME * 2);
-
-  while (true) {
-  }
 }
